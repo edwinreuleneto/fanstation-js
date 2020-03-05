@@ -1,0 +1,87 @@
+export declare const auth: {
+    agency: string;
+    idol: string;
+    user: string;
+};
+export declare const user: {
+    authenticate: string;
+    logout: string;
+    create: string;
+    update: string;
+    get: string;
+    savePicture: string;
+    getPicture: (pictureId: any) => string;
+    sendConfirmationEmail: string;
+    confirmUserEmail: string;
+    changePassword: string;
+    requestPasswordReset: string;
+    resetPassword: string;
+    getEncryptionKey: string;
+};
+export declare const idol: {
+    get: (id: any) => string;
+    getMinicopy: (id: any) => string;
+    getByAlias: (alias: any) => string;
+    getWelcomeVideo: (alias: any) => string;
+    search: string;
+    getFeatured: string;
+    getAllCategories: string;
+    uploadOrder: string;
+};
+export declare const agency: {
+    authenticate: string;
+    logout: string;
+    create: string;
+    get: string;
+    update: string;
+    savePicture: string;
+    getPicture: (pictureId: any) => string;
+    confirmRegistration: string;
+    requestResetPassword: string;
+    resetPassword: string;
+    verifyToken: string;
+    createIdol: string;
+    updateIdol: string;
+    getIdol: (artistId: any) => string;
+    getIdols: string;
+    uploadWelcomeVideo: (artistId: any) => string;
+    uploadMinicopy: (artistId: any) => string;
+    createIdolCategory: string;
+    searchOrders: string;
+    uploadOrder: string;
+    setArtistAsFeatured: (artistId: any) => string;
+    togglePurchaseStatementApproval: (orderId: any) => string;
+    togglePurchaseReactionApproval: (orderId: any) => string;
+    updateCommercialDealStatus: string;
+    updateCommissions: string;
+};
+export declare const order: {
+    getOrderDownload: string;
+    getDownloadNonce: string;
+    getOrdersByUser: string;
+    scheduleOrder: string;
+    scheduleUnregisteredOrder: string;
+    processPurchase: string;
+    evaluateOrder: string;
+    getEvaluationsBy: string;
+    getReactionVideo: string;
+    createCelebrationReason: string;
+    getCelebrationReasons: string;
+    getAllReactions: string;
+    getAllStatements: string;
+};
+export declare const financial: {
+    getAllDeals: string;
+    getReport: string;
+    getUsernames: string;
+    uploadNewCommercialDealFile: string;
+    removeFile: string;
+    downloadCommercialDealFile: string;
+};
+export declare const administrative: {
+    termOfUse: string;
+    useOfImage: string;
+    latestUseOfImage: string;
+    privacyPolicy: string;
+    purchaseTerm: string;
+};

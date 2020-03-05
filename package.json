@@ -1,0 +1,41 @@
+{
+  "name": "fanstation-js",
+  "version": "0.0.1",
+  "description": "JavaScript client to FanStation gateway",
+  "main": "index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "start": "",
+    "test": "mocha",
+    "build": "rm -rf lib && ttsc --outDir lib && node index.js",
+    "lint": "eslint ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/omnidigitalis-dev/celebre/frontend/fanstation-js.git"
+  },
+  "keywords": [],
+  "author": "Hélio Sayama",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.7.3",
+    "chai": "^4.2.0",
+    "eslint": "^6.2.2",
+    "eslint-config-google": "^0.13.0",
+    "mocha": "^6.2.0",
+    "ttypescript": "^1.5.7",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "browser-or-node": "^1.2.1",
+    "class-transformer": "^0.2.3",
+    "class-transformer-validator": "^0.7.1",
+    "class-validator": "^0.10.0",
+    "form-data": "^2.5.1",
+    "lodash": "^4.17.15",
+    "module-alias": "^2.2.1",
+    "object-path-immutable": "^3.1.1",
+    "reflect-metadata": "^0.1.13"
+  }
+}

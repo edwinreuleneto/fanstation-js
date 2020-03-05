@@ -1,0 +1,35 @@
+import { AxiosInstance } from "axios";
+import { Idol, Agency, Order, ExperienceType } from "../../domain";
+import { AgencyClientModule, Authentication, Result } from "../interface";
+import { CategoryList } from "../../domain/idol/category";
+import { DealFile } from "../../domain/financial/dealFile";
+import { Commissions } from "../../domain/financial/commissions";
+export default class implements AgencyClientModule {
+    private api;
+    constructor(api: AxiosInstance);
+    authenticate: (login: string, password: string) => Promise<Result<Authentication>>;
+    logout: (token: string) => Promise<Result<null>>;
+    get: (token?: string[]) => Promise<Result<Agency>>;
+    create: (agency: Agency) => Promise<Result<Agency>>;
+    update: (agency: Agency, token?: string) => Promise<Result<Agency>>;
+    savePicture: (file: any, token?: string) => Promise<Result<Agency>>;
+    getPicture: (pictureId: number, token?: string) => Promise<Result<Int8Array>>;
+    confirmRegistration: (token: string) => Promise<Result<undefined>>;
+    requestResetPassword: (email: string) => Promise<Result<undefined>>;
+    resetPassword: (token: string, newPassword: string) => Promise<Result<string>>;
+    verifyToken: (token: string) => Promise<Result<undefined>>;
+    getIdol: (artistId: number, token?: string) => Promise<Result<Idol>>;
+    getIdols: (name: string, category: string, page: number, size: number, token?: string) => Promise<Result<Idol[]>>;
+    uploadWelcomeVideo: (artistId: number, video: any, token?: string) => Promise<Result<undefined>>;
+    uploadMinicopy: (artistId: number, experienceType: ExperienceType, minicopy: any, token?: string) => Promise<Result<undefined>>;
+    createIdol: (idol: Idol, token?: string) => Promise<Result<Idol>>;
+    updateIdol: (idol: Idol, token?: string) => Promise<Result<Idol>>;
+    createIdolCategory: (categories: CategoryList, token?: string) => Promise<Result<CategoryList>>;
+    searchOrders: (page: number, size: number, token?: string) => Promise<Result<Order>>;
+    uploadOrder: (file: any, orderId: number, token?: string) => Promise<Result<undefined>>;
+    toggleIdolFeatured: (artistId: number, featured: boolean, token?: string) => Promise<Result<undefined>>;
+    togglePurchaseStatementApproval: (orderId: number, token?: string) => Promise<Result<undefined>>;
+    togglePurchaseReactionApproval: (orderId: number, token?: string) => Promise<Result<undefined>>;
+    updateCommercialDealStatus: (artistId: number, token?: string) => Promise<Result<DealFile>>;
+    updateCommissions: (commissions: Commissions, token?: string) => Promise<Result<any>>;
+}

@@ -1,0 +1,90 @@
+export declare const routes: {
+    auth: {
+        login: (authType: string, realm: string) => string;
+        mobile: string;
+        logout: (authType: string, realm: string) => string;
+    };
+    user: {
+        auth: string;
+        logout: string;
+        create: string;
+        update: string;
+        get: string;
+        savePicture: string;
+        getPicture: (pictureId: any) => string;
+        sendConfirmationEmail: string;
+        confirmUserEmail: string;
+        changePassword: string;
+        requestPasswordReset: string;
+        resetPassword: string;
+        getEncryptionKey: string;
+    };
+    idol: {
+        auth: string;
+        logout: string;
+        get: (id: any) => string;
+        getMinicopy: (id: any) => string;
+        getByAlias: (alias: any) => string;
+        getWelcomeVideo: (alias: any) => string;
+        search: string;
+        getFeatured: string;
+        getAllCategories: string;
+        searchCategories: string;
+        uploadOrder: string;
+    };
+    backoffice: {
+        auth: string;
+        logout: string;
+        create: string;
+        get: string;
+        update: string;
+        savePicture: string;
+        getPicture: (pictureId: any) => string;
+        confirmRegistration: string;
+        requestResetPassword: string;
+        resetPassword: string;
+        verifyToken: string;
+        createIdol: string;
+        updateIdol: string;
+        getIdol: (artistId: any) => string;
+        getIdols: string;
+        uploadWelcomeVideo: (artistId: any) => string;
+        uploadMinicopy: (artistId: any) => string;
+        createIdolCategory: string;
+        searchOrders: string;
+        uploadOrder: string;
+        setArtistAsFeatured: (artistId: any) => string;
+        togglePurchaseStatementApproval: (orderId: any) => string;
+        togglePurchaseReactionApproval: (orderId: any) => string;
+        updateCommercialDeal: string;
+        updateCommercialDealStatus: string;
+        updateCommissions: string;
+    };
+    order: {
+        getOrderDownload: string;
+        getDownloadNonce: string;
+        getOrdersByUser: string;
+        scheduleOrder: string;
+        scheduleUnregisteredOrder: string;
+        processPurchase: string;
+        evaluateOrder: string;
+        getEvaluationsBy: string;
+        getReactionVideo: string;
+        createCelebrationReason: string;
+        getCelebrationReasons: string;
+        getAllReactions: string;
+        getAllStatements: string;
+    };
+    financial: {
+        getAllDeals: string;
+        getReport: string;
+        getUsernames: string;
+    };
+    administrative: {
+        termOfUse: string;
+        useOfImage: string;
+        privacyPolicy: string;
+        purchaseTerm: string;
+        testing: string;
+    };
+};
